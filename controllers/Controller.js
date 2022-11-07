@@ -19,22 +19,19 @@ exports.PageConnexion = (req, res) => {
 
 exports.authentification = async (req, res) => {
     const { email, password } = req.body
-
-    if (email && password) {
-        const user = users.find((users) => users.email == email)
-        if (user) {
-            const verif = bcrypt.compare(password, user.password)
-            if (verif) {
-                req.session.iduser = user.id
-                res.redirect('/')
-            }
-            else {
-                res.redirect("/connexion")
-            }
+    const utilisateur = users.find((user) => user.email == email)
+    if (utilisateur) {
+        if (password != utilisateur.password) {
+            res.redirect("/connexion")
         }
         else {
-            res.redirect('/connexion')
+            req.session.iduser = utilisateur.id
+            res.redirect('/')
         }
+    }
+
+    else {
+        res.redirect("/connexion")
     }
 }
 
@@ -63,12 +60,14 @@ exports.register = async (req, res) => {
 }
 
 exports.deconnexion = (req, res) => {
-    req.session.destroy((error) => {
+    req.session.destroy((error)=>{
         if (error) {
-            res.render('index', { cours })
+            res.redirect('/')
         }
-        res.clearCookie(process.env.SECRETE)
-        res.render('index', { cours })
+        else{
+            res.clearCookie(process.env.SECRETE)
+            res.redirect('/')
+        }
     })
 }
 

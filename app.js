@@ -33,7 +33,6 @@ app.use(session({
         secure: false
     }
 })
-
 )
 
 const verification = (req, res, next) => {
@@ -43,8 +42,11 @@ const verification = (req, res, next) => {
     else {
         next()
     }
-
 }
+
+
+
+
 app.get('/', index)
 app.get('/inscription', PageInscription)
 app.get('/connexion', PageConnexion)
