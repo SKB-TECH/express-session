@@ -1,0 +1,147 @@
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    background-color: blue;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.log {
+    margin-right: 20px;
+    padding: 10px;
+    color: white;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.list-item {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    color: white;
+
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    margin: 10px;
+}
+
+
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    height: fit-content;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 1px 16px -8px rgba(0, 0, 0, 0.68);
+    box-shadow: 0px 1px 16px -8px rgba(0, 0, 0, 0.68);
+    object-fit: cover;
+    margin: 10px;
+}
+
+img {
+    width: 250px;
+    height: 250px;
+}
+
+.action {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.btn {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: blue;
+    border: 2px solid white;
+}
+
+.container1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.new_user {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    height: 40px;
+    width: 300px;
+    border: 1px solid blue;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+input:focus {
+    outline: none;
+}
+
+.btnc {
+    height: 40px;
+    width: 300px;
+    border: 1px solid;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: blue;
+    color: white;
+}
+
+.imgav {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.link {
+    font-size: 14px;
+    color: rgb(97, 97, 246);
+}
+
+.title {
+    font-size: 20px;
+    font-weight: bold;
+}
